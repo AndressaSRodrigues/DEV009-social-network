@@ -1,10 +1,15 @@
-function login(navigateTo) {
+function join(navigateTo) {
   const main = document.createElement('main');
 
   const title = document.createElement('h3');
-  title.textContent = 'Ingrese al SpookyVerse';
+  title.textContent = 'Únete al SpookyVerse';
 
-  const loginForm = document.createElement('form');
+  const joinForm = document.createElement('form');
+
+  const fullName = document.createElement('input');
+  fullName.setAttribute('type', 'text');
+  fullName.setAttribute('placeholder', 'Nombre y apellido');
+  fullName.setAttribute('required', '');
 
   const email = document.createElement('input');
   email.setAttribute('type', 'email');
@@ -13,7 +18,7 @@ function login(navigateTo) {
 
   const password = document.createElement('input');
   password.setAttribute('type', 'password');
-  password.setAttribute('placeholder', 'Contraseña');
+  password.setAttribute('placeholder', 'Crea tu contraseña');
   password.setAttribute('required', '');
 
   const btnEnter = document.createElement('button');
@@ -27,15 +32,10 @@ function login(navigateTo) {
     navigateTo('/');
   });
 
-  const forgotPassword = document.createElement('a');
-  forgotPassword.className = 'forgot-password';
-  forgotPassword.setAttribute('href', '/');
-  forgotPassword.textContent = 'olvidé mi contraseña';
-
-  loginForm.append(email, password, forgotPassword, btnEnter, btnReturn);
-  main.append(title, loginForm);
+  joinForm.append(fullName, email, password, btnEnter, btnReturn);
+  main.append(title, joinForm);
 
   return main;
 }
 
-export default login;
+export default join;
