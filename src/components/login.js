@@ -4,6 +4,10 @@ function login(navigateTo) {
   const title = document.createElement('h2');
   title.textContent = 'Ingrese al SpookyVerse';
 
+  const logologin = document.createElement('img');
+  logologin.src = 'components/images/logo.png';
+  logologin.setAttribute('id', 'logo-login-join');
+
   const loginForm = document.createElement('form');
 
   const logo = document.createElement('img');
@@ -11,38 +15,41 @@ function login(navigateTo) {
   logo.setAttribute('id', 'logo-login');
 
   const email = document.createElement('input');
-  email.className = 'btn-email';
+  email.className = 'input-login-join';
   email.setAttribute('type', 'email');
   email.setAttribute('placeholder', 'Correo electronico');
   email.setAttribute('required', '');
 
   const password = document.createElement('input');
-  password.className = 'btn-password';
+  password.className = 'input-login-join';
   password.setAttribute('type', 'password');
   password.setAttribute('placeholder', 'Contraseña');
   password.setAttribute('required', '');
 
-  const forgotPassword = document.createElement('a');
-  forgotPassword.className = 'forgot-password';
-  forgotPassword.setAttribute('href', '/');
-  forgotPassword.textContent = 'Olvidé mi contraseña';
+  const buttonend = document.createElement('div');
+  buttonend.className = 'buttonend';
 
   const btnEnter = document.createElement('button');
-  btnEnter.className = 'btn-enter';
+  btnEnter.className = 'button-login-join';
   btnEnter.textContent = 'Entrar';
   btnEnter.setAttribute('type', 'submit');
 
   const btnReturn = document.createElement('button');
-  btnReturn.className = 'btn-return';
+  btnReturn.className = 'button-login-join';
   btnReturn.textContent = 'Volver';
   btnReturn.setAttribute('type', 'button');
   btnReturn.addEventListener('click', () => {
     navigateTo('/');
   });
 
-  loginForm.append(logo, email, password, forgotPassword, btnEnter, btnReturn);
-  main.append(title, loginForm);
+  const forgotPassword = document.createElement('a');
+  forgotPassword.className = 'forgot-password';
+  forgotPassword.setAttribute('href', '/');
+  forgotPassword.textContent = 'Olvidé mi contraseña';
 
+  loginForm.append(email, password, forgotPassword, buttonend);
+  main.append(title, logologin, loginForm);
+  buttonend.append(btnEnter, btnReturn);
   return main;
 }
 
