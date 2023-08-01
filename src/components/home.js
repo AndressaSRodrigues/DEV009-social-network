@@ -12,7 +12,7 @@ function home(navigateTo) {
 
   const logo = document.createElement('img');
   logo.src = 'components/images/logo.png';
-  logo.setAttribute('id','logo-home');
+  logo.setAttribute('id', 'logo-home');
 
   const login = document.createElement('button');
   login.className = 'btn-login';
@@ -28,9 +28,8 @@ function home(navigateTo) {
     navigateTo('/join');
   });
 
-  text.append(title,slogan)
+  text.append(title, slogan);
   main.append(title, slogan, logo, login, join);
-
 
   return main;
 }

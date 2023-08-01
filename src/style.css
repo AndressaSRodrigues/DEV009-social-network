@@ -2,6 +2,7 @@ body {
     margin: 0;
     background-image: url('components/images/background.png');
     background-size: cover;
+    font-family: 'Glegoo', serif;
 }
 main {
     background-color: #B4A5A5;
@@ -9,16 +10,63 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     padding: 50px;
     margin: 100px 40px;
     border-radius: 20px;
-    height: 550px;
+    height: 400px;
+    font-family: 'Glegoo', serif;
 }
 #logo-home {
     width: 200px;
     height: auto;
+    margin: 10px;
 }
+
 .div-text {
     display: flex;
     justify-content: start;
+}
+.btn-login,.btn-join {
+    font-family: 'Glegoo', serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 3px;
+    border-radius: 8px;
+    background-color: #B4A5A5;
+    color: #301B3F;
+    border: 2px outset;
+}
+
+#logo-login {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+.btn-email,.btn-password {
+    font-family: 'Glegoo', serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(219, 219, 219);
+    color:rgb(37, 37, 37);
+
+}
+
+.forgot-password{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-enter,.btn-return {
+    font-family: 'Glegoo', serif;
+    font-weight: 500;
+    border-radius: 8px;
+    background-color: white;
+    color:rgb(37, 37, 37);
+    border: 2px outset;
 }
